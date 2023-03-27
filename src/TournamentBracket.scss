@@ -1,0 +1,94 @@
+$shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+$first-color: #233142;
+$second-color: #455d7a;
+$third-color: #f95959;
+$fourth-color: #e3e3e3;
+
+button:hover {
+    background-image: linear-gradient(-180deg, #ffd9d9, #ff6262);
+}
+button {
+    background-image: linear-gradient(-180deg, #fcc2c2, #ff4040);
+    color: $first-color;
+    border-radius: 5px;
+    box-shadow: $shadow;
+    touch-action: manipulation;
+    border-color: $first-color;
+    padding: 10px 30px;
+    font-size: medium;
+    cursor: pointer;
+}
+
+#addTextBox {
+    height: 20px;
+    width: 250px;
+    margin: 0 15px 0 0;
+}
+#submitButton {
+    padding: 5px 20px
+}
+
+
+.teamsList {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.teamListItemName {
+    margin: 0 100px 0 0;
+}
+.teamListItem:hover {
+    cursor: default;
+    background-image: none;
+}.teamListItem {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $fourth-color;
+    font-weight: 700;
+    width: 300px;
+    margin: 0 0 5px 0;
+    padding: 1px 5px;
+    gap: 0;
+    background-image: none;
+    box-shadow: none;
+    border-width: 1;
+    box-shadow: $shadow;
+}
+.buttons {
+    display: flex;
+    flex-direction: row;
+    padding: 2px 5px;
+    cursor: pointer;
+}.delete {
+    padding: 2px 5px;
+}
+form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1%;
+    border-radius: 5px;
+}
+input {
+    border-radius: 5px;
+    color: $first-color;
+    background-color: $fourth-color;
+}.editingName {
+    border-style: none;
+}.editingName:focus {
+    border-style: none;
+    border-width: 0;
+    
+}
+.singleOrDoubleElim {
+    display: flex;
+    justify-content: space-around;
+    margin: 1%;
+    height: 95%;
+    width: 95%;
+}

@@ -1,0 +1,105 @@
+$shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+$first-color: #233142;
+$second-color: #455d7a;
+$third-color: #f95959;
+$fourth-color: #e3e3e3;
+
+
+#root {
+  display: flex;
+  background-color: $first-color;
+  width: 100%;
+  height: 100%;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  background-color: $second-color;
+  justify-content: center;
+  box-shadow: $shadow;
+  border-radius: 10px;
+  width: 96%;
+  height: 96%;
+  margin: 2%;
+  padding: 1%;
+}
+
+.TitleBar {
+  display: flex;
+  background-color: $third-color;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  border-style: solid;
+  box-shadow: $shadow;
+  margin: 1%;
+}
+
+.Main {
+  display: flex;
+  flex-direction: row;
+  background-color: $fourth-color;
+  border-radius: 10px;
+  border-style: solid;
+  margin: 1%;
+  box-shadow: $shadow;
+}
+
+.LeftPanel {
+  display: flex;
+  flex-direction: column;
+  background-color: $third-color;
+  border-radius: 10px;
+  border-style: solid;
+  box-shadow: $shadow;
+  width: 30%;
+  height: 100%;
+  margin: 1%;
+  overflow-y: auto;
+}
+
+.RightPanel {
+  display: flex;
+  flex-direction: column;
+  background-color: $third-color;
+  border-radius: 10px;
+  border-style: solid;
+  box-shadow: $shadow;
+  width: 70%;
+  height: 100%;
+  margin: 1%;
+  padding-left: 1%;
+  overflow-y: auto;
+}
+
+.TableOfContents {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  padding-right: 10%;
+}
+
+h2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+li:hover {
+  background-image: linear-gradient(-180deg, #ffd9d9, #ff6262);
+}
+li {
+  background-image: linear-gradient(-180deg, #fcc2c2, #ff4040);
+  color: $first-color;
+  border-radius: 5px;
+  border-width: 2px;
+  border-style: outset;
+  border-color: $first-color;
+  margin: 0 0 5px 0;
+  box-shadow: $shadow;
+  touch-action: manipulation;
+  padding: 5px;
+  font-size: medium;
+  cursor: pointer;
+}
