@@ -1,7 +1,8 @@
 $shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 
-$first-color: #233142;
-$second-color: #455d7a;
+$font-white: #ffffff;
+$first-color: #131313;
+$second-color: #252525;
 $third-color: #f95959;
 $fourth-color: #e3e3e3;
 
@@ -9,8 +10,9 @@ $fourth-color: #e3e3e3;
 #root {
   display: flex;
   background-color: $first-color;
-  width: 100%;
   height: 100%;
+  width: 100%;
+  border-radius: 10px;
 }
 
 .App {
@@ -18,28 +20,19 @@ $fourth-color: #e3e3e3;
   flex-direction: column;
   background-color: $second-color;
   justify-content: center;
-  box-shadow: $shadow;
   border-radius: 10px;
-  width: 96%;
-  height: 96%;
-  margin: 2%;
-  padding: 1%;
+  width: 100%;
+  height: 100%;
 }
 
-.TitleBar {
-  display: flex;
-  background-color: $third-color;
-  align-items: center;
-  justify-content: center;
-  border-radius: 10px;
-  border-style: solid;
-  box-shadow: $shadow;
-  margin: 1%;
-}
+
+
+
 
 .Main {
   display: flex;
-  flex-direction: row;
+  justify-content: center;
+  align-items: center;
   background-color: $fourth-color;
   border-radius: 10px;
   border-style: solid;
@@ -86,6 +79,8 @@ h2 {
   justify-content: center;
   align-items: center;
 }
+
+
 li:hover {
   background-image: linear-gradient(-180deg, #ffd9d9, #ff6262);
 }

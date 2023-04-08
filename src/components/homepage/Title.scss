@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Press+Start+2P&display=swap');
+
+@mixin font_fancy {
+    font: {
+        family: 'Cinzel', serif;
+        weight: 600;
+    }
+}
+@mixin font_8bit {
+    font: {
+        family: 'Press Start 2P', cursive;
+        weight: 400;
+    }
+}
+
+.TitleScreen {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    width: 98%;
+    height: 98%;
+    margin: 1%;
+}
+h1 {
+    @include font_8bit;
+    display: flex;
+    margin: 0;
+}
+.TitlePC {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    
+}
+.TitleRow {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: flex-end;
+}

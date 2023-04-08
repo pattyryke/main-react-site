@@ -1,13 +1,14 @@
-import React, { useState } from 'react';
-import './TournamentBracket.scss';
-import './App.scss';
-import Team from './Team';
-import AddTeam from './AddTeam';
-import useWindowSize from './assets/useWindowSize';
-import { SingleEliminationBracket, Round, Match } from '@g-loot/react-tournament-brackets';
-
-
-
+import React, { useState } from "react";
+import "./TournamentBracket.scss";
+import "../../App.scss";
+import Team from "./Team";
+import AddTeam from "./AddTeam";
+import useWindowSize from "../useWindowSize";
+import {
+  SingleEliminationBracket,
+  Round,
+  Match,
+} from "@g-loot/react-tournament-brackets";
 
 const TournamentBracket = () => {
   const [teams, setTeams] = useState([]);

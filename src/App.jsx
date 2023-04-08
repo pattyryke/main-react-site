@@ -1,43 +1,24 @@
-import React, { useState } from "react";
+import React, { useRef, useEffect, useState } from "react";
+import HomePage from "./components/homepage/HomePage";
 import "./App.scss";
-import TableOfContents from "./TableOfContents";
-import WelcomePage from "./WelcomePage";
-import TournamentBracket from "./TournamentBracket";
-import BracketBuilder from "./BracketBuilder";
-
-const pages = [
-	{
-		title: "Home Page",
-		component: <WelcomePage />,
-	},
-	{
-		title: "Build a Bracket",
-		component: <TournamentBracket />,
-	},
-	// Add more pages as needed
-];
+import "./components/homepage/Title.scss";
 
 function App() {
-	const [page, setPage] = useState(pages[0].component);
+  const appRef = useRef();
+  const [appWidth, setAppWidth] = useState(0);
+  const [appHeight, setAppHeight] = useState(0);
 
-	const handlePageChange = (newPage) => {
-		setPage(newPage);
-	};
+  useEffect(() => {
+    const { width, height } = appRef.current.getBoundingClientRect();
+    setAppWidth(width+50);
+    setAppHeight(height+50);
+  }, []);
 
-	return (
-		<div className='App'>
-			<div className='TitleBar'>
-				<h1>PatrickCapovilla.com</h1>
-			</div>
-			<div className='Main'>
-				<div className='LeftPanel'>
-					<TableOfContents pages={pages} onPageChange={handlePageChange} />
-				</div>
-
-				<div className='RightPanel'>{page}</div>
-			</div>
-		</div>
-	);
+  return (
+    <div ref={appRef} className="App">
+      <HomePage appHeight={appHeight} appWidth={appWidth} />
+    </div>
+  );
 }
 
 export default App;
