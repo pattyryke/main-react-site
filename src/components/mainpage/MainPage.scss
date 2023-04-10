@@ -20,6 +20,15 @@
     align-items: center;
     z-index: 0;
 }
+.websiteName {
+    @include font_8bit;
+    display: flex;
+    position: fixed;
+    margin: 0;
+    top: 10px;
+    left: 10px;
+    z-index: 6;
+}
 .TitleScreen {
     display: flex;
     flex-direction: column;

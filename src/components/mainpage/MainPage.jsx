@@ -14,6 +14,7 @@ const MainPage = () => {
 
   return (
     <div className="MainPageContainer">
+      <p className="websiteName">PatrickCapovilla.com</p>
       {currentPage === "home" ? (
         <Background>
           <Title onClick={handleTitleClick} />

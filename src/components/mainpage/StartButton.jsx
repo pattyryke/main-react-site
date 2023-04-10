@@ -7,7 +7,7 @@ export function StartButton() {
     useEffect(() => {
         gsap.to(
           buttonRef.current,
-          { duration: 0.5, y: -50, ease: Power1.easeOut, delay: 6, yoyo: true, repeat: -1 }
+          { duration: 0.5, y: -25, ease: Power1.easeOut, delay: 6, yoyo: true, repeat: -1 }
         );
     }, [])
 
