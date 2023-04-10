@@ -1,0 +1,31 @@
+$font-white: #ffffff;
+$first-color: #131313;
+$second-color: #252525;
+$third-color: #f95959;
+$fourth-color: #e3e3e3;
+
+
+.jokeboxWindow {
+  display: flex;
+  flex-direction: column;
+  height:  50%;
+  width: 50%;
+  background-color: $third-color;
+  border-radius: 10px;
+}
+.jokeboxResponse {
+  display: flex;
+  height: 68%;
+  width: 98%;
+  margin: 1%;
+  background-color: $fourth-color;
+  border-radius: 10px;
+}
+.generateJokeButton {
+  display: flex;
+  height: 28%;
+  width: 98%;
+  margin: 1%;
+  background-color: $fourth-color;
+  border-radius: 10px;
+}

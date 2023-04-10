@@ -1,11 +1,10 @@
 import React, { useRef } from "react";
 import StarsGroup from "./StarsGroup";
 
-const Background = ({ children, appHeight, appWidth }) => {
-  const backgroundRef = useRef(null);
+
+const Background = ({ children }) => {
   return (
     <div
-      ref={backgroundRef}
       style={{
         backgroundColor: "#242424",
         width: "100%",
@@ -13,10 +12,11 @@ const Background = ({ children, appHeight, appWidth }) => {
         position: "relative", // Use relative positioning to keep the background in the flow of the document
         left: 0,
         top: 0,
+        zIndex: -1,
       }}
     >
-      <StarsGroup count={0} appHeight={appHeight} appWidth={appWidth} direction={"horizontal"} />
-      <StarsGroup count={0} appHeight={appHeight} appWidth={appWidth} direction={"vertical"} />
+      <StarsGroup count={0} direction={"horizontal"} />
+      <StarsGroup count={0} direction={"vertical"} />
       {children}
     </div>
   );
